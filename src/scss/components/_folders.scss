@@ -1,0 +1,48 @@
+.folders {
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 8.95px;
+    }
+    &__item {
+        list-style: none;
+        a {
+            text-decoration: none;
+            display: inline-block;
+            @include font-styles(16px, 700, $folderItemsColor);
+            line-height: $lineHeight;
+            letter-spacing: $letSpacing;
+            padding: 14px 35px 14px;
+            border-radius: 30px;
+            background-color: $folderItemsBg;
+            transition: .3s;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            &:before {
+                @include pseudo();
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: $black;
+                height:  0;
+                transition: $trans;
+                z-index: -1;
+            }
+            &:hover {
+                background: rgba($textGray, .2);
+            }
+        }
+        &.active {
+            a {
+                &:before {
+                    height: 100%;
+                }
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@mixin bg-op($size, $pos, $repeat) {
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $repeat;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin font-styles($size, $weight, $color: #fff) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}

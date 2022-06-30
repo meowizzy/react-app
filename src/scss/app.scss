@@ -1,0 +1,47 @@
+@import './normalize';
+@import './libs/vars';
+@import './libs/mixins';
+@import './components/header';
+@import './components/folders';
+@import './components/sorting';
+@import './components/product';
+@import './components/options';
+@import './components/addBtn';
+@import './components/productPrice';
+
+body {
+    font-family: $mainFont;
+    background-color: $mainBg;
+}
+
+
+.wrapper {
+    max-width: 1340px;
+    width: 100%;
+    margin: 43px auto;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba($black, 0.03);
+    padding-bottom: 96px;
+}
+
+.container {
+    padding: 0 67px;
+    &__sorting-panel {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+// temporary
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 35px;
+    row-gap: 35px;
+}

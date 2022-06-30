@@ -1,0 +1,79 @@
+.sorting {
+    position: relative;
+    z-index: 1;
+    &__heading {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        @include font-styles(14px, 700);
+        line-height: 17.05px;
+        letter-spacing: 1.5%;
+    }
+    &__title {
+        margin: 0;
+        color: $folderItemsColor;
+        position: relative;
+        padding-left: 17px;
+        &:before {
+            @include pseudo();
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 5.62px;
+            background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5C10 5.16927 9.93815 5.31576 9.81445 5.43945C9.69075 5.56315 9.54427 5.625 9.375 5.625H0.625C0.455729 5.625 0.309245 5.56315 0.185547 5.43945C0.061849 5.31576 0 5.16927 0 5C0 4.83073 0.061849 4.68424 0.185547 4.56055L4.56055 0.185547C4.68424 0.061849 4.83073 0 5 0C5.16927 0 5.31576 0.061849 5.43945 0.185547L9.81445 4.56055C9.93815 4.68424 10 4.83073 10 5Z' fill='%232C2C2C'/%3E%3C/svg%3E%0A");
+            @include bg-op(cover, center, no-repeat);
+        }
+    }
+    &__current {
+        color: $orange;
+        font-weight: 400;
+        border-bottom: 1px dotted $orange;
+        cursor: pointer;
+    }
+    &__items {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        min-width: 132px;
+        background-color: $white;
+        box-shadow: 0px 5px 15px rgba($black, 0.09);
+        border-radius: 10px;
+        margin: 0;
+        padding: 13px 0;
+        transition: $trans;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: $trans;
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+        }
+    }
+    &__item {
+        list-style: none;
+        a {
+            text-decoration: none;
+            display: block;
+            @include font-styles(14px, 400, $black);
+            transition: $trans;
+            padding: 10px 14px 11px;
+            &:hover {
+                color: $orange;
+                background-color: rgba($orange, .05);
+            }
+        }
+        &.active {
+            a {
+                color: $orange;
+                background-color: rgba($orange, .05);
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+[
+    {
+        "id": 0,
+        "productName": "Чизбургер-пицца",
+        "productPrice": 395,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 1,
+        "productName": "Сырная",
+        "productPrice": 450,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 2,
+        "productName": "Креветки по-азиатски",
+        "productPrice": 290,
+        "options": {
+            "sizes": [26, 40, 31],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 3,
+        "productName": "Сырный цыпленок",
+        "productPrice": 385,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 4,
+        "productName": "Чизбургер-пицца",
+        "productPrice": 395,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 5,
+        "productName": "Сырная",
+        "productPrice": 450,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 6,
+        "productName": "Креветки по-азиатски",
+        "productPrice": 290,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 7,
+        "productName": "Сырный цыпленок",
+        "productPrice": 385,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 8,
+        "productName": "Чизбургер-пицца",
+        "productPrice": 395,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 9,
+        "productName": "Сырная",
+        "productPrice": 450,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 10,
+        "productName": "Креветки по-азиатски",
+        "productPrice": 290,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    },
+    {
+        "id": 11,
+        "productName": "Сырный цыпленок",
+        "productPrice": 385,
+        "options": {
+            "sizes": [30, 40],
+            "types": ["тонкое", "традиционное"]
+        }
+    }
+]

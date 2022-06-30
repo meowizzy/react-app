@@ -1,0 +1,5 @@
+.product-price {
+    @include font-styles(22px, 700, $black);
+    line-height: 26.8px;
+    letter-spacing: 0.0015em;
+}

@@ -1,0 +1,36 @@
+.product-options {
+    background-color: $gray;
+    padding: 7px 5.73px;
+    border-radius: 10px;
+    &__item {
+        margin: 0 0 7px;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 7px;
+        column-gap: 7px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        li {
+            min-width: calc(100% / 3 - 16px - 7px);
+            margin: 0 0;
+            flex: 1 1;
+            list-style: none;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+            @include font-styles(14px, 700, $black);
+            line-height: 17.05px;
+            letter-spacing: 0.0015em;
+            transition: $trans;
+            &:not(.active) {
+                cursor: pointer;
+            }
+            &.active, &:hover {
+                background-color: $white;
+                box-shadow: 0px 2px 4px rgba($black, 0.04);
+            }
+        }
+    }
+}
