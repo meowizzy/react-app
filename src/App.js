@@ -20,7 +20,7 @@ function App() {
         </div>
         <PageTitle/>
         <div className="product-list">
-          {Products.map((product) => (<Product {...product}/>))}
+          {Products.map((product) => (<Product key={product.id} {...product}/>))}
         </div>
       </div>
     </div>

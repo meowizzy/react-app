@@ -1,38 +1,32 @@
 [
     {
-        "0": {
-            "folderName": "Все",
-            "folderAlias": "/"
-        }
+        "folderId": "0",
+        "folderName": "Все",
+        "folderAlias": "/"   
     },
     {
-        "1": {
-            "folderName": "Мясные",
-            "folderAlias": "/"
-        }
+        "folderId": "1",
+        "folderName": "Мясные",
+        "folderAlias": "/"
     },
     {
-        "2": {
-            "folderName": "Вегетарианская",
-            "folderAlias": "/"
-        }
+        "folderId": "2",
+        "folderName": "Вегетарианская",
+        "folderAlias": "/"
     },
     {
-        "3": {
-            "folderName": "Гриль",
-            "folderAlias": "/"
-        }
+        "folderId": "3",
+        "folderName": "Гриль",
+        "folderAlias": "/"
     },
     {
-        "4": {
-            "folderName": "Острые",
-            "folderAlias": "/test"
-        }
+        "folderId": "4",
+        "folderName": "Острые",
+        "folderAlias": "/test"
     },
     {
-        "5": {
-            "folderName": "Закрытые",
-            "folderAlias": "/"
-        }
+        "folderId": "5",
+        "folderName": "Закрытые",
+        "folderAlias": "/"
     }
 ]

@@ -12,7 +12,7 @@ function ProductOptions(props) {
             <ul className="product-options__item">
                 {
                     options.types.map((item, index) => (
-                        <li key={index} onClick={() => setActiveType(index)} className={index === activeType ? "active" : ""}>{item}</li>
+                        <li key={item} onClick={() => setActiveType(index)} className={index === activeType ? "active" : ""}>{item}</li>
                     ))
                 }
             </ul>
@@ -20,7 +20,7 @@ function ProductOptions(props) {
             <ul className="product-options__item">
                 {
                     options.sizes.map((item, index) => (
-                        <li key={index} onClick={() => setActiveSize(index)} className={index === activeSize ? "active" : ""}>{item}</li>
+                        <li key={item} onClick={() => setActiveSize(index)} className={index === activeSize ? "active" : ""}>{item}</li>
                     ))
                 }
             </ul>
