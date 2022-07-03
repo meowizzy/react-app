@@ -1,5 +1,5 @@
-import ProductOptions from "./ProductOptions";
-import AddBtn from "./AddBtn";
+import ProductOptions from "../ProductOptions";
+import AddBtn from "../AddBtn";
 
 
 function Product(props) {
