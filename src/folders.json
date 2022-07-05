@@ -1,0 +1,32 @@
+[
+    {
+        "folderId": "0",
+        "folderName": "Все",
+        "folderAlias": "/"   
+    },
+    {
+        "folderId": "1",
+        "folderName": "Мясные",
+        "folderAlias": "/"
+    },
+    {
+        "folderId": "2",
+        "folderName": "Вегетарианская",
+        "folderAlias": "/"
+    },
+    {
+        "folderId": "3",
+        "folderName": "Гриль",
+        "folderAlias": "/"
+    },
+    {
+        "folderId": "4",
+        "folderName": "Острые",
+        "folderAlias": "/test"
+    },
+    {
+        "folderId": "5",
+        "folderName": "Закрытые",
+        "folderAlias": "/"
+    }
+]

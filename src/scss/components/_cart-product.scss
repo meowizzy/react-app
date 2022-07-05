@@ -1,0 +1,120 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid #F4F4F4;
+    &__left {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__image {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        margin-right: 15px;
+        a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__container {
+        width: calc(100% - 80px - 15px);
+    }
+
+    &__name {
+        margin-bottom: 3px;
+        a {
+            text-decoration: none;
+            @include font-styles(22px, 700, $black);
+            line-height: 26.8px;
+            letter-spacing: 0.01em;
+        }
+    }
+    &__params {
+        @include font-styles(18px, 400, #8d8d8d);
+    }
+
+    &__right {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.cart-sum {
+    @include font-styles(22px, 700, $black);
+}
+
+.cart-delete {
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: none;
+    background-color: transparent;
+    border: 2px solid #D7D7D7;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.74791 6.95572L6.49931 4.70712L8.74791 2.45852C9.16184 2.04459 9.16184 1.37338 8.74791 0.959454C8.33398 0.545525 7.66277 0.545525 7.24884 0.959454L5.00024 3.20805L2.75164 0.959454C2.33771 0.545525 1.66651 0.545525 1.25258 0.959454C0.838648 1.37338 0.838648 2.04459 1.25258 2.45852L3.50118 4.70712L1.25258 6.95572C0.838649 7.36965 0.838649 8.04086 1.25258 8.45479C1.66651 8.86872 2.33772 8.86872 2.75164 8.45479L5.00024 6.20619L7.24884 8.45479C7.66277 8.86872 8.33398 8.86872 8.74791 8.45479C9.16184 8.04086 9.16184 7.36965 8.74791 6.95572Z' fill='%23D0D0D0'/%3E%3C/svg%3E%0A");
+    @include bg-op(10.6px, center, no-repeat);
+    transition: $trans;
+    &:hover {
+        background-color: #D7D7D7;
+        background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.74791 6.95572L6.49931 4.70712L8.74791 2.45852C9.16184 2.04459 9.16184 1.37338 8.74791 0.959454C8.33398 0.545525 7.66277 0.545525 7.24884 0.959454L5.00024 3.20805L2.75164 0.959454C2.33771 0.545525 1.66651 0.545525 1.25258 0.959454C0.838648 1.37338 0.838648 2.04459 1.25258 2.45852L3.50118 4.70712L1.25258 6.95572C0.838649 7.36965 0.838649 8.04086 1.25258 8.45479C1.66651 8.86872 2.33772 8.86872 2.75164 8.45479L5.00024 6.20619L7.24884 8.45479C7.66277 8.86872 8.33398 8.86872 8.74791 8.45479C9.16184 8.04086 9.16184 7.36965 8.74791 6.95572Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
+    }
+}
+
+
+.product-amount {
+    width: 102px;
+    display: flex;
+    button {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        border-radius: 50%;
+        box-shadow: none;
+        border: 2px solid $orange;
+        background-color: transparent;
+        @include font-styles(22px, 400, $orange);
+        cursor: pointer;
+        transition: $trans;
+        outline: none;
+        &:hover {
+            color: $white;
+            background-color: $orange;
+        }
+    }
+    &__minus {
+        
+    }   
+    &__plus {
+
+    }
+    &__input {
+        width: auto;
+        border: 0;
+        display: block;
+        box-shadow: none;
+        text-align: center;
+        width: calc(100% - 64px);
+        padding: 0;
+        outline: none;
+        @include font-styles(22px, 700, $black);
+        &::placeholder {
+            @include font-styles(22px, 700, $black);
+        }
+    }
+}
