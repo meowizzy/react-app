@@ -1,16 +1,21 @@
 import React, { useState } from "react"; 
 
-function Sorting() {
+function Sorting({selectedSortItem, setSelectedSortItem}) {
     const [isVisible, setVisible] = useState(false);
-    const [selectedItemIndex, setSelectedItemIndex] = useState(0);
-    const sortingItems = ["популярности (DESC)", "популярности (ASC)", "цене (DESC)", "цене (ASC)", "алфавиту (DESC)", "алфавиту (ASC)"];
-    const selectedItem = sortingItems[selectedItemIndex];
+    const sortingItems = [
+        {name: "популярности (DESC)", sortType: "rating", sortMethod: "desc"},
+        {name: "популярности (ASC)", sortType: "rating", sortMethod: "asc"},
+        {name: "цене (DESC)", sortType: "productPrice", sortMethod: "desc"},
+        {name: "цене (ASC)", sortType: "productPrice", sortMethod: "asc"},
+        {name: "алфавиту (DESC)", sortType: "productName", sortMethod: "desc"},
+        {name: "алфавиту (ASC)", sortType: "productName", sortMethod: "asc"}
+    ];
 
-    const handleClickOnSortingItem = (event, index) => {
+    const handleClickOnSortingItem = (event, obj) => {
         event.preventDefault();
-        setSelectedItemIndex(index);
+        setSelectedSortItem(obj);
         
-        if (index !== selectedItemIndex) {
+        if (obj.name !== selectedSortItem.name) {
             setVisible(false);
         }
     };
@@ -27,11 +32,13 @@ function Sorting() {
         <div className="sorting">
             <div className="sorting__heading">
                 <p className="sorting__title">Сортировка по:</p>
-                <span className="sorting__current" onClick={() => setVisible(!isVisible)}>{selectedItem}</span>
+                <span className="sorting__current" onClick={() => setVisible(!isVisible)}>{selectedSortItem.name}</span>
             </div>
             <ul className={isVisible ? "sorting__items active" : "sorting__items"}>
                 {sortingItems.map((item, index) => (
-                    <li key={item} className={selectedItemIndex === index ? "sorting__item active" : "sorting__item"}><a href="/" onClick={(event) => handleClickOnSortingItem(event, index)}>{item}</a></li>
+                    <li key={item.name} className={selectedSortItem.name === item.name ? "sorting__item active" : "sorting__item"}>
+                        <a href="/" onClick={(event) => handleClickOnSortingItem(event, item)}>{item.name}</a>
+                    </li>
                 ))}
             </ul>
         </div>
