@@ -4,13 +4,13 @@ import AddBtn from "../AddBtn";
 
 function Product(props) {
 
-    const {id, productName, productPrice, options} = props;
+    const {id, productName, productPrice, options, image} = props;
 
     return(
         <div className="product-item" key={id}>
             <div className="product-item__image">
                 <a href="/">
-                    <img src="images/product/product1.png" alt="" />
+                    <img src={image} alt="" />
                 </a>
             </div>
             <div className="product-item__name">
