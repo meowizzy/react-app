@@ -9,23 +9,29 @@ import ProductPreloader from '../components/Product/Preloader';
 function Home() {
     const [products, setProducts] = React.useState([]);
     const [isLoaded, setLoaded] = React.useState(false);
-  
+    const [folderId, setFolderId] = React.useState(0);
+    const [selectedSort, setSelectedSort] = React.useState({name: "популярности (DESC)", sortType: "rating", sortMethod: "desc"});
+
     React.useEffect(() => {
-        fetch('https://62c0af81c134cf51ced2dc48.mockapi.io/products')
+
+        setLoaded(false);
+        fetch(`https://62c0af81c134cf51ced2dc48.mockapi.io/products?${
+            folderId ? `folderId=${folderId}` : ''
+        }&sortBy=${selectedSort.sortType}&order=${selectedSort.sortMethod}`)
         .then(response => response.json())
         .then(data => {
           setProducts(data);
           setLoaded(true);
         });
-    }, []);
+    }, [folderId, selectedSort]);
   
     return (
         <>
             <div className="container__sorting-panel">
-            <Folders/>
-            <Sorting/>
+                <Folders activeIndex={folderId} handleClickFolder={(index) => setFolderId(index)}/>
+                <Sorting selectedSortItem={selectedSort} setSelectedSortItem={(obj) => setSelectedSort(obj)}/>
             </div>
-            <PageTitle Title="Все пиццы"/>
+                <PageTitle Title="Все пиццы"/>
             <div className="product-list">
             {
                 !isLoaded 
